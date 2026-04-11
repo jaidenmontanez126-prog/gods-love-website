@@ -752,3 +752,94 @@ margin: 580px auto 30px;
   position: relative;
 left: -140px;
 }
+.devotional-links-section {
+  max-width: 900px;
+  margin: 120px auto 80px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.devotional-links-section h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #2f241f;
+}
+
+.devotional-links-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.devotional-links-card a {
+  display: inline-block;
+  background: #d6b8a3;
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.devotional-links-card a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+#devotionals h2 a {
+  color: #2f241f;
+  text-decoration: none;
+}
+
+#devotionals h2 a:hover {
+  text-decoration: underline;
+}
+
+.back-home-button {
+  display: inline-block;
+  margin-top: 22px;
+  background: #d6b8a3;
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.back-home-button:hover {
+  opacity: 0.9;
+}
+
+.devotionals-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+.devotionals-buttons a {
+  display: inline-block;
+  background: #c79f84;
+  color: white;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.devotionals-buttons a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
