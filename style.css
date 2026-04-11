@@ -843,3 +843,14 @@ left: -140px;
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
+
+.devotionals-page-content {
+  display: flex;
+  justify-content: center;
+}
+
+.devotionals-page-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 200px auto 0;
+}
