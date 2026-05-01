@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devotionals & Resources</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRJC5FQG7M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HRJC5FQG7M');
+</script>
 </head>
 <body class="devotionals-page">
 
@@ -22,8 +31,9 @@
       <p>Choose a devotional below.</p>
 
       <div class="devotionals-buttons">
-        <a href="https://payhip.com/b/OhSVq" target="_blank">When Anxiety Replaces Peace</a>
-        <a href="https://payhip.com/b/GloQp" target="_blank">Is It Laziness... or Something Deeper? – A Short Devotional</a>      </div>
+        <a href="https://payhip.com/b/0hSVq" target="_blank" onclick="gtag('event', 'devotional_download', {'devotional_name': 'When Anxiety Replaces Peace'});">When Anxiety Replaces Peace</a>        <a href="https://payhip.com/b/GloQp" target="_blank">Is It Laziness... or Something Deeper? – A Short Devotional</a>      
+        <a href="https://payhip.com/b/Gl0Qp" target="_blank" onclick="gtag('event', 'devotional_download', {'devotional_name': 'Is It Laziness... or Something Deeper?'});">Is It Laziness... or Something Deeper? - A Short Devotional</a>
+      </div>
       <a href="index.html" class="back-home-button">Back to Home</a>
     </section>
   </main>
