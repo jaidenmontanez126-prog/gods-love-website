@@ -286,6 +286,9 @@ margin: 0 8px;
 .platform-icons a:nth-child(2):hover {
   background: #ff6600;
 }
+.social-icons a:nth-child(2):hover {
+  background: #ff0000;
+}
 
 /* Spotify */
 .platform-icons a:nth-child(3):hover {
