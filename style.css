@@ -3,8 +3,7 @@ html {
     }body{
     font-family: Arial, sans-serif;
     margin:0;
-    background: url("background.jpeg") no-repeat center top;
-    background-size: cover;
+    background: url("background.jpeg") no-repeat center top;    background-size: cover;
     justify-content: space-between;
 align-items:center;
 padding:20px 40px;
@@ -75,7 +74,8 @@ nav a {
   }
     
     .hero {
-      margin-top: 700px;
+      margin-top: 600px;
+      height: fit-content;
       position: relative;
       top: 0;
       background: rgba(255, 255, 255, 0.22);
@@ -87,7 +87,7 @@ nav a {
       justify-content: flex-start;
       align-items: flex-start;
       text-align: left;
-      padding: 20px 20px 40px;
+      padding: 20px;      
       color: black;
         }
       
@@ -211,8 +211,8 @@ nav a {
                 }
                 #episodes{
                     text-align:center;
-                    padding:60px 20px;
-                }
+                    padding: 25px 20px;                
+                  }
                 
                 .podcast-player{
                     max-width:800px;
@@ -220,7 +220,7 @@ nav a {
                 }
                 .listen-on{
                     text-align:center;
-                    margin-top:20px;
+                    margin-top:0px;
                 }
                 
                 .listen-on p{
@@ -464,7 +464,7 @@ margin: 0 8px;
   }
 
   .hero {
-    margin-top: 120px;
+    margin-top: 40px;
     padding: 24px 20px;
   }
 
@@ -895,4 +895,141 @@ left: -140px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
   color: #6f5260;
   text-decoration: none;
+}
+
+.newsletter-mini {
+  margin-top: 200px;  
+  padding: 28px;
+  width: 260px;
+
+.newsletter-mini h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+}
+
+.newsletter-mini p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.newsletter-mini a {
+  color: #8d5f3f;  
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.newsletter-mini a:hover {
+  color: #8d5f3f;
+}
+
+.newsletter-page {
+  background: #f4eee8;
+  margin: 0;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.newsletter-page-content img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.back-home {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #8d5f3f;
+  text-decoration: none;
+  font-weight: 600;
+}
+.newsletter-page {
+  background: #f6f1ea;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+}
+
+.newsletter-signup-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #f8f4ee;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.newsletter-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  background: #f8f4ee;
+}
+
+.newsletter-hero-text {
+  padding: 80px 70px;
+}
+
+.script-text {
+  font-size: 72px;
+  font-family: cursive;
+  color: #4d5b3f;
+  margin-bottom: -10px;
+}
+
+.newsletter-signup-page h1 {
+  font-size: 92px;
+  line-height: 0.95;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.newsletter-intro {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 500px;
+}
+
+.newsletter-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+  margin: 20px auto;
+}
+
+.fake-newsletter-form input {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid #888;
+}
+
+.fake-newsletter-form button {
+  padding: 16px 28px;
+  border: none;
+  background: #314631;
+  color: white;
+  cursor: pointer;
+}
+
+.newsletter-hero-image {
+  position: relative;
+  display: inline-block;
+}
+
+.image-join-button {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 70px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
