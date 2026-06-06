@@ -242,6 +242,10 @@ nav a {
                     text-decoration:none;
                     font-size:14px;
                 }
+
+                .platform-icons a.youtube-icon:hover {                  
+                  background: #ff0000;
+                }
                 
                 .platform-icons a:hover{
                     opacity:0.8;
