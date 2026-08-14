@@ -910,3 +910,43 @@ left: -140px;
 
 }
 
+/* Quiet Time With God */
+#quiet-time {
+  text-align: center;
+  padding: 28px 30px;
+}
+
+#quiet-time h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#quiet-time p {
+  max-width: 650px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+#quiet-time a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 0 auto;
+  background: #ff0000;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+#quiet-time a i {
+  font-size: 18px;
+}
+
+#quiet-time a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
