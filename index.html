@@ -16,16 +16,20 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<script src="navigation.js" defer></script>
 </head>
 
 <body>
 
-    <header>
+    <header class="site-header">
 
-        <div class="logo-area">
-        </div>
+
         
-        <nav>
+        <a class="mobile-brand" href="index.html">God’s Love Above All</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open menu" hidden>
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="main-navigation" aria-label="Main navigation">
           <a href="#episodes-section">Episodes</a>
           <a href="#about">Podcast</a>
           <a href="#mission">Mission</a>
@@ -33,13 +37,62 @@
           <a href="#contact">Contact</a>
           <a href="es.html">ES</a>
         
+        </nav>
         </header>
 
-        <div class="top-two-sections"> 
-            <section id="devotionals">
-            <h2><a href="devotionals.html">Devotionals &amp; Resources</a></h2>
-            <p>Download the free devotional to help you reflect, reset, and take one step forward.</p>
-            
+    <section class="hero">   
+                  <h2>God's Word Through Emotional Chaos</h2>
+                  <a class="primary-button" href="#episodes-section">Listen to the Latest Episode</a>
+            <div class="listen-on">
+
+                <p>Listen on:</p>
+              
+                <div class="platform-icons">
+
+                    <a href="https://podcasts.apple.com/us/podcast/gods-love-above-all/id1883376237" target="_blank" aria-label="Apple Podcasts">
+                        <i class="fa-brands fa-apple"></i>
+                      </a>
+                    
+                    <a href="https://hellofw5.podbean.com/e/trailergods-love-above-all/" target="_blank" aria-label="Podbean">
+                        <i class="fa-solid fa-podcast"></i>
+                      </a>
+                    
+                    <a href="https://open.spotify.com/show/4cwq4dIFo6fKn4jEsIoV0Q" target="_blank" aria-label="Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://music.amazon.com/podcasts/1dc043ef-85d8-442a-a1b0-2720efad68a0/god’s-love-above-all" target="_blank" aria-label="Amazon Music">
+                      <i class="fa-brands fa-amazon"></i>
+                  </a>
+                  
+                  <a href="https://www.iheart.com/podcast/1333-gods-love-above-all-326043954/" target="_blank" aria-label="iHeart">
+                      <i class="fa-solid fa-heart"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@GodsLoveAboveAll-f8w" target="_blank" class="youtube-icon" aria-label="YouTube">
+                                        <i class="fa-brands fa-youtube"></i>
+                  </a>
+                    </div>
+                    
+              
+                <p class="follow-text">Follow:</p>
+              
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/godsloveaboveall_/" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a>  
+                        <a href="https://www.pinterest.com/imontanez0265" target="_blank" aria-label="Pinterest">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>             
+
+                      </div>
+                        <a href="mailto:contact@godsloveaboveall.com" class="contact-button">Contact Us</a>            
+            </div>
+            </section>
+
+    <section id="devotionals">
+      <h2><a href="devotionals.html">Devotionals &amp; Resources</a></h2>
+      <p>Explore devotionals to help you reflect, reset, and take one step forward in faith.</p>
+      <a class="resource-button" href="devotionals.html">Explore Devotionals</a>
+    </section>
             <section id="quiet-time-feature">
               <img src="quiet-time-cover 2.jpeg"
      alt="Open Bible with candle, highlighters, and heart-shaped notes"
@@ -55,62 +108,11 @@
               <a href="https://www.youtube.com/@quietwithgodasmr"
                  target="_blank"
                  rel="noopener noreferrer"
-                 class="quiet-youtube-btn">
+                 class="quiet-youtube-btn" aria-label="YouTube">
                 <i class="fab fa-youtube"></i>
                 Visit YouTube Channel
               </a>
-            </section>
-          </section>
-    <section class="hero">   
-                  <h2>God's Word Through Emotional Chaos</h2>
-            <div class="listen-on">
-
-                <p>Listen on:</p>
-              
-                <div class="platform-icons">
-
-                    <a href="https://podcasts.apple.com/us/podcast/gods-love-above-all/id1883376237" target="_blank">
-                        <i class="fa-brands fa-apple"></i>
-                      </a>
-                    
-                    <a href="https://hellofw5.podbean.com/e/trailergods-love-above-all/" target="_blank">
-                        <i class="fa-solid fa-podcast"></i>
-                      </a>
-                    
-                    <a href="https://open.spotify.com/show/4cwq4dIFo6fKn4jEsIoV0Q" target="_blank">
-                    <i class="fa-brands fa-spotify"></i>
-                    <a href="https://music.amazon.com/podcasts/1dc043ef-85d8-442a-a1b0-2720efad68a0/god’s-love-above-all" target="_blank">
-                      <i class="fa-brands fa-amazon"></i>
-                  </a>
-                  
-                  <a href="https://www.iheart.com/podcast/1333-gods-love-above-all-326043954/" target="_blank">
-                      <i class="fa-solid fa-heart"></i>
-                  </a>
-                  <a href="https://www.youtube.com/@GodsLoveAboveAll-f8w" target="_blank" class="youtube-icon">
-                                        <i class="fa-brands fa-youtube"></i>
-                  </a>
-                    </div>
-                    
-              
-                <p class="follow-text">Follow:</p>
-              
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/godsloveaboveall_/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                        </a>  
-                        <a href="https://www.pinterest.com/imontanez0265" target="_blank">
-                          <i class="fa-brands fa-pinterest"></i>
-                        </a>             
-
-                      </div>
-                        <a href="mailto:contact@godsloveaboveall.com" class="contact-button">Contact Us</a>            
-            </section>
-          </section>
-
-
-          
-        </section>
-      </div>
+  
       <section id="episodes-section">
                               <h2>Latest Episodes</h2>
             
@@ -171,3 +173,6 @@
   </p>
   <p class="verse-ref">Matthew 6:33</p>
   <p class="footer-copy" style="margin-top: 180px;">© 2026 God's Love Above All | <a href="disclaimer.html">Disclaimer</a> | <a href="privacy.html">Privacy Policy</a></p>
+</div>
+</body>
+</html>

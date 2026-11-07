@@ -3,7 +3,8 @@ html {
     }body{
     font-family: Arial, sans-serif;
     margin:0;
-    background: url("background.jpeg") no-repeat center top;    background-size: cover;
+    background: url("background.jpeg") no-repeat center top;    background-size: 100% auto;
+    background-color: #e5d6cd;
     justify-content: space-between;
 align-items:center;
 padding:20px 40px;
@@ -26,17 +27,16 @@ margin: 10px auto;
       backdrop-filter: blur(14px) saturate(140%);
 
       border-radius:12px;
-      left: 50%;
-      transform:translateX(-50%);
+
       -webkit-backdrop-filter: blur(14px) saturate(140%);
   
       
 
 
-}  }
-  }
+}  
   
-}
+  
+
 nav {
   display: flex;
   flex-wrap: nowrap;  
@@ -74,7 +74,7 @@ nav a {
   }
     
     .hero {
-      margin-top: 600px;
+      margin-top: clamp(80px, 20vw, 320px);
       height: fit-content;
       position: relative;
       top: 0;
@@ -144,14 +144,14 @@ nav a {
           background: rgba(255, 255, 255, 0.45);
           box-shadow: 0 12px 40px rgba(0,0,0,0.18);
       }
-      }
+      
       
       section:hover {
           transform: translateY(-4px);
           box-shadow: 0 10px 25px rgba(0,0,0,0.15);
           background: rgba(255, 255, 255, 0.68);
       }
-      }
+      
     
     .card{
       background: rgba(255, 255, 255, 0.7);    padding:20px;
@@ -309,7 +309,7 @@ margin: 0 8px;
 .platform-icons a:nth-child(5):hover {
   background: #e60023;
 }
-}
+
 .contact-button:hover {
     transform: scale(1.05);
     transition: 0.2s;
@@ -408,7 +408,7 @@ margin: 0 8px;
     color: white;
         text-align: center;
 }
-}
+
 .platform-icons a {
   display: inline-block;
   margin: 10px;
@@ -731,7 +731,7 @@ margin: 0 8px;
   font-weight: bold;
 }
 
-#devotionals .quiet-youtube-btn {
+#quiet-time-feature .quiet-youtube-btn {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
@@ -752,41 +752,31 @@ margin: 0 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
 }
 
-#devotionals .quiet-youtube-btn i {
+#quiet-time-feature .quiet-youtube-btn i {
   font-size: 20px;
   color: white;
 }
 
+/* Keep both columns within the viewport; stack them on smaller screens. */
 .top-two-sections {
   display: grid;
-  grid-template-columns: 330px 920px;
-    column-gap: 24px;
-  align-items: stretch;
-  justify-content: start;
-    max-width: 1400px;
-margin: 580px auto 30px;     
-   padding: 0 20px;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  max-width: 1240px;
+  margin: clamp(80px, 20vw, 320px) auto 64px;
 }
 
 .top-two-sections #devotionals {
-  width: 320px;
-  max-width: 320px;
-  margin: 99px 0 0 0;
-        position: relative;
-  left: -500px;
-  z-index: 2;
-  min-height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .top-two-sections .hero {
   width: 100%;
-  max-width: 980px;
   margin: 0;
-  justify-self: start;
-  position: relative;
-  left: -140px;
-  top: 180px;}
-
+}
 
 .devotional-links-section {
   max-width: 900px;
@@ -936,10 +926,10 @@ margin: 580px auto 30px;
 
 
 
-}
+
 
 /* Quiet Time With God button */
-#devotionals .quiet-youtube-btn {
+#quiet-time-feature .quiet-youtube-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -962,11 +952,11 @@ margin: 580px auto 30px;
   transition: all 0.25s ease;
 }
 
-#devotionals .quiet-youtube-btn i {  
+#quiet-time-feature .quiet-youtube-btn i {  
   font-size: 18px;
 }
 
-#devotionals .quiet-youtube-btn:hover {  
+#quiet-time-feature .quiet-youtube-btn:hover {  
   transform: translateY(-2px);
   opacity: 0.85;
 }
@@ -983,7 +973,7 @@ margin: 580px auto 30px;
 
 #quiet-time-feature {
   position: relative;
-  top: 250px;
+  margin: 28px 0 0;
 }
 
 /* Devotional cards */
@@ -1009,4 +999,273 @@ margin: 580px auto 30px;
   object-fit: contain;  
   border-radius: 12px;
   margin: 12px 0;
+}
+/* Shared sizing also keeps padding, navigation, and embeds inside phone screens. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 0;
+  padding: 20px clamp(16px, 3vw, 40px);
+}
+
+header {
+  width: 100%;
+  max-width: 660px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+section {
+  width: 100%;
+  min-width: 0;
+  scroll-margin-top: 120px;
+  overflow-wrap: anywhere;
+}
+
+section:hover {
+  transform: none;
+}
+
+.hero {
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(26px, 2.5vw, 40px);
+  line-height: 1.2;
+  margin: 16px 0 28px;
+}
+
+.listen-on {
+  width: 100%;
+}
+
+.platform-icons, .social-icons {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.platform-icons a, .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 44px;
+  margin: 0;
+  padding: 10px;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+.podcast-player iframe {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.devotionals-buttons {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .top-two-sections {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 680px;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .top-two-sections .hero {
+    grid-row: 1;
+  }
+
+  .top-two-sections #devotionals {
+    grid-row: 2;
+  }
+
+  #quiet-time-feature {
+    max-width: 100%;
+  }
+
+  .devotionals-buttons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    max-width: 660px;
+    padding: 8px;
+  }
+
+  body > .hero, .devotionals-page-card {
+    margin-top: clamp(70px, 20vw, 150px);
+  }
+
+  section {
+    margin-bottom: 32px;
+    padding: 22px 18px;
+  }
+
+  .hero h1, .hero-title, h1 {
+    font-size: clamp(28px, 7vw, 42px);
+    line-height: 1.15;
+  }
+
+  .podcast-player {
+    padding: 8px;
+    margin: 20px auto;
+  }
+
+  .footer-verse {
+    padding: 48px 0 32px;
+  }
+
+  .verse {
+    font-size: 32px;
+  }
+}
+
+/* Centered page layout and continuous, stationary floral backdrop. */
+body {
+  background: #e5d6cd;
+  isolation: isolate;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #e5d6cd url("background.jpeg") center top / cover no-repeat;
+}
+body > section {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding: 28px 30px;
+  background: rgba(255, 247, 242, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+body > section h2 { line-height: 1.25; margin-top: 0; }
+body > .hero {
+  margin-top: clamp(160px, 20vw, 320px);
+  padding: 32px 30px;
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+.hero h2 { margin: 0 0 24px; }
+#devotionals {
+  background: rgba(255, 247, 242, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+#quiet-time-feature { margin: 0 auto 32px; }
+.quiet-time-cover {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+.primary-button, .resource-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 26px;
+  background: #795b49;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.primary-button:hover, .resource-button:hover { background: #604534; }
+.hero .contact-button, .platform-icons a, .social-icons a {
+  background: #795b49;
+  color: #fff;
+}
+.platform-icons a, .social-icons a { width: 48px; height: 48px; }
+.listen-on { margin-top: 12px; }
+#quiet-time-feature .quiet-youtube-btn { margin-top: 12px !important; background: #c90000 !important; }
+a:focus-visible, button:focus-visible { outline: 3px solid #553725; outline-offset: 4px; }
+.mobile-brand, .menu-toggle { display: none; }
+.footer-verse { padding: 48px 20px 32px; }
+.footer-verse .verse, .footer-verse .verse-ref, .footer-copy { color: #3c2d25; text-shadow: none; }
+.footer-verse .footer-copy { position: static; margin-top: 40px !important; line-height: 1.6; }
+.footer-copy a { color: #493326; }
+@media (max-width: 768px) {
+  body { padding: 12px 16px; }
+  body::before { background-size: auto 140%; background-position: center bottom; }
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+    margin: 0 auto;
+    background: rgba(255, 247, 242, 0.94);
+  }
+  .mobile-brand {
+    display: block;
+    flex: 1;
+    color: #2f241f;
+    font-size: clamp(17px, 4.6vw, 23px);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .menu-toggle:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #bfa68e;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .menu-toggle span { width: 22px; height: 2px; background: #493326; }
+  .site-header nav { flex-basis: 100%; flex-direction: column; align-items: stretch; padding-top: 8px; }
+  .site-header nav a { min-height: 44px; padding: 8px 12px; }
+  .site-header.menu-ready nav { display: none; }
+  .site-header.menu-ready.menu-open nav { display: flex; }
+  body > .hero { margin-top: 32px; padding: 24px 18px; }
+  body > section { padding: 24px 18px; margin-bottom: 24px; }
+  #quiet-time-feature { margin-bottom: 24px; }
+  .hero h2 { font-size: clamp(26px, 6vw, 36px); }
+  .devotionals-page-card { margin-top: 32px; }
+  .primary-button, .resource-button { max-width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
